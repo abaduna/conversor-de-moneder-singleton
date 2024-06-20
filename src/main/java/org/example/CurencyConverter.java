@@ -6,9 +6,12 @@ public class CurencyConverter {
 
     }
 
-    private static final CurencyConverter instance = new CurencyConverter();
+    private static  CurencyConverter instance;
 
     public static CurencyConverter getInstance() {
+        if (instance == null) {
+            instance = new CurencyConverter();
+        }
         return instance;
     }
 
